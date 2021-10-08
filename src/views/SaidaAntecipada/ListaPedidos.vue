@@ -1,5 +1,5 @@
 <template>
-  <v-app class="listaPedidos">
+  <v-app class="mainBackGround">
     <div class="col-12">
       <v-card elevation="1" class="mx-auto mt-3">
         <v-card-text>

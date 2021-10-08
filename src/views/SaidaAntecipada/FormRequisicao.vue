@@ -1,5 +1,5 @@
 <template>
-  <v-app class="formRequisicao">
+  <v-app class="mainBackGround">
     <div class="col-12">
       <v-card elevation="1" class="mx-auto mt-3">
         <v-card-text>
@@ -82,8 +82,8 @@
             </v-row>
             <v-divider></v-divider>
             <v-row class="col-12 mt-1">
-              <v-col align="left" class="col-2 mt-5 mr-10">
-                <span class="font-weight-medium">Retornará para a empresa?</span>
+              <v-col align="left" class="col-3 mt-5">
+                <span class="font-weight-bold">Retornará para a empresa?</span>
               </v-col>
               <v-col  class="col-2 mr-5">
                   <v-sheet>
@@ -130,9 +130,11 @@
             </v-row>
             <v-divider></v-divider>
             <v-row class="col-12 mt-1 mb-3">
+              <v-col align="left" class="col-1 mt-5" >
+                <span class="font-weight-bold">Motivo:</span>
+              </v-col>
               <v-col class="col-8">
                 <v-radio-group  row dense>
-                  <span class="font-weight-medium">Motivo:</span>
                   <v-radio class="ml-7" label="Consulta/Exames médicos" value="consulta"></v-radio>
                   <v-radio class="ml-7" label="A trabalho" value="trabalho"></v-radio>
                   <v-radio class="ml-7" label="Outros" value="outros"></v-radio>
