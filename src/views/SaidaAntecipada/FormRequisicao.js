@@ -1,15 +1,17 @@
 export default {
     data: vm => ({
       date: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-      dateFormatted: vm.formatDate((new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)),
+      dataSaidaFormatada: vm.formatDate((new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10)),
       
+      retornoEmpresa: false,
+      motivoSaida: false,
       dataSaida: false,
       retorno: null,
       hrRetorno: false,
       saida: null,
       hrSaida: false,
       select: null,
-      verificaRetorno: false,
+
       
       funcionarios: [
         'Tobias Guimaraes',
