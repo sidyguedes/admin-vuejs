@@ -31,7 +31,7 @@
                     <v-text-field dense outlined v-model="saida" label="Horário de saída"
                       prepend-icon="mdi-clock-time-four-outline" readonly v-bind="attrs" v-on="on"></v-text-field>
                   </template>
-                  <v-time-picker v-if="hrSaida" v-model="saida" full-width @click:minute="$refs.teste.save(saida)">
+                  <v-time-picker format="24hr" v-if="hrSaida" v-model="saida" full-width @click:minute="$refs.teste.save(saida)">
                   </v-time-picker>
                 </v-menu>
               </v-col>
@@ -55,7 +55,7 @@
                       <v-text-field :disabled="!retornoEmpresa" dense outlined v-model="retorno" label="Retorno previsto"
                         prepend-icon="mdi-clock-time-four-outline" readonly v-bind="attrs" v-on="on"></v-text-field>
                     </template>
-                    <v-time-picker v-if="hrRetorno" v-model="retorno" full-width
+                    <v-time-picker format="24hr" v-if="hrRetorno" v-model="retorno" full-width
                       @click:minute="$refs.menu.save(retorno)"></v-time-picker>
                   </v-menu>
                 </v-col>

@@ -35,7 +35,7 @@
               <v-list-item-icon>
                 <v-icon>mdi-home</v-icon>
               </v-list-item-icon>
-              <v-list-item-title>Home Office</v-list-item-title>
+              <v-list-item-title><router-link to="/ListaPedidosHome">Home Office</router-link></v-list-item-title>
             </v-list-item>
             <v-list-item link>
               <v-list-item-icon>
