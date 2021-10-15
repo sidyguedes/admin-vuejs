@@ -35,7 +35,24 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/HomeOffice/FormRequisicao.vue')
-  }
+  },
+  {
+    path: '/ListaPedidosFerias',
+    name: 'ListaPedidosFerias',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Ferias/ListaPedidos.vue')
+  },
+  {
+    path: '/FormRequisicaoFerias',
+    name: 'FormRequisicaoFerias',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/Ferias/FormRequisicao.vue')
+  },
+
 ]
 
 const router = new VueRouter({

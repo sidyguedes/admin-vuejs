@@ -1,18 +1,13 @@
 import moment from 'moment';
 export default {
     data:() => ({
-      dataSaidaFerias: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
-      dataSaida: false,
-      retornoEmpresa: false,
-      motivoSaida: false,
-      retorno: null,
-      hrRetorno: false,
-      saida: null,
-      hrSaida: false,
-      select: null,
-
-      
-      funcionarios: [
+        dataSaidaFerias: (new Date(Date.now() - (new Date()).getTimezoneOffset() * 60000)).toISOString().substr(0, 10),
+        selectFuncionario: false,
+        inicioFerias: false,
+        abonoPecuniario: false,
+        adiantamento13: false,
+        
+        funcionarios: [
         'Tobias Guimaraes',
         'Elisabete Ranciaro',
         'Josiane Oliveira Krainski',
@@ -29,21 +24,16 @@ export default {
         'Joao Carlos Zanetti	',
         'Alejandro Pietry Ribeiro Trindade		al',
         'Alisson Couto	2',
-        'Ana Maria Rolao Dos Santos Va',
-        'Andre Luis Burei do Ca',
-        'Bruno Noveli	3',
-        'Caio Henrique Piantikovicz		c',
-        'Caio L.K Schinemann	',
-        'Charles Juan da Silva Mendes'
+        'Ana Maria Rolao Dos Santos Va'
         
       ],
      
     }),
-
     computed: {
-      dataSaidaFormatada() {
-        return moment(this.dataSaidaFerias).format('DD/MM/YYYY');
-      }
+        dataInicioFeriasFormatada() {
+            return moment(this.dataSaidaFerias).format('DD/MM/YYYY');
+        }
+
     }
 
   }

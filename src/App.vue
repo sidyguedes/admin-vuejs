@@ -41,7 +41,7 @@
               <v-list-item-icon>
                 <v-icon>mdi-airplane</v-icon>
               </v-list-item-icon>
-              <v-list-item-title>Férias</v-list-item-title>
+              <v-list-item-title><router-link to="/ListaPedidosFerias">Férias</router-link></v-list-item-title>
             </v-list-item>
             <v-list-item link>
               <v-list-item-icon>

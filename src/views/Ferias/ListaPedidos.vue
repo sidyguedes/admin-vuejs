@@ -7,9 +7,9 @@
             <v-toolbar-title class="title-toolbar">Lista de Pedidos</v-toolbar-title>
             <v-divider class="mx-4" inset vertical></v-divider>
             <v-spacer></v-spacer>
-            <router-link to="/FormRequisicaoHomeOffice">
+            <router-link to="/FormRequisicaoFerias">
             <v-btn color="#07456a" dark >
-              <v-icon class="mr-3">mdi-home-plus-outline</v-icon>Novo Pedido
+              <v-icon class="mr-3">mdi-airplane-plus</v-icon>Novo Pedido
             </v-btn>
             </router-link>
           </v-toolbar>
