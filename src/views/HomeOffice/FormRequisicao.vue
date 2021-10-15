@@ -14,14 +14,30 @@
                     :rules="[v => !!v || 'Item is required']" label="Funcionário" required></v-select>
                 </v-col>
               <v-col class="col-4 ml-15">
-                <v-menu ref="dataSaida" v-model="dataSaida" :close-on-content-click="false"
-                  transition="scale-transition" offset-y max-width="290px" min-width="auto">
+                <v-menu 
+                  v-model="dataSaida"
+                  :close-on-content-click="false"
+                  :nudge-right="40"
+                  transition="scale-transition"
+                  offset-y
+                  min-width="auto"
+                >
                   <template v-slot:activator="{ on, attrs }">
-                    <v-text-field dense outlined v-model="dataSaidaFormatada" label="Data de saída" persistent-hint
-                      prepend-icon="mdi-calendar" v-bind="attrs" @blur="date = parseDate(dataSaidaFormatada)" v-on="on">
-                    </v-text-field>
+                    <v-text-field
+                      dense outlined
+                      v-model="dataSaidaFormatada"
+                      label="Data de Saída"
+                      prepend-icon="mdi-calendar"
+                      readonly
+                      v-bind="attrs"
+                      v-on="on"
+                    ></v-text-field>
                   </template>
-                  <v-date-picker v-model="date" no-title @input="dataSaida = false"></v-date-picker>
+                  <v-date-picker
+                    locale="pt-br"
+                    v-model="dataSaidaHome"
+                    @input="dataSaida = false"
+                  ></v-date-picker>
                 </v-menu>
               </v-col>
             </v-row>
@@ -55,26 +71,37 @@
             <v-divider></v-divider>
             <v-row v-show="motivoSaida && motivoSaida != 'outros' && motivoSaida != 'manutencao'" class="col-12 mt-2 mb-2">
               <v-col class="col-3">
-                <v-menu ref="dataSintoma" v-model="dataSintoma" :close-on-content-click="false"
-                  transition="scale-transition" offset-y max-width="290px" min-width="auto">
+                <v-menu 
+                  v-model="dataSintoma"
+                  :close-on-content-click="false"
+                  :nudge-right="40"
+                  transition="scale-transition"
+                  offset-y
+                  min-width="auto"
+                >
                   <template v-slot:activator="{ on, attrs }">
-                    <v-text-field dense outlined v-model="dataSintomaFormatada" :label="motivoSaida == 'contato' ? 'Data que teve contato' : 'Inicio dos sintomas' " persistent-hint
-                      prepend-icon="mdi-calendar" v-bind="attrs" @blur="inicioSintomas = parseDate(dataSintomaFormatada)" v-on="on">
-                    </v-text-field>
+                    <v-text-field
+                      dense outlined
+                      v-model="dataSintomasFormatada"
+                      :label="motivoSaida == 'contato' ? 'Data que teve contato' : 'Inicio dos sintomas' "
+                      prepend-icon="mdi-calendar"
+                      readonly
+                      v-bind="attrs"
+                      v-on="on"
+                    ></v-text-field>
                   </template>
-                  <v-date-picker v-model="inicioSintomas" no-title @input="dataSintoma = false"></v-date-picker>
+                  <v-date-picker
+                    locale="pt-br"
+                    v-model="dataSintomaContato"
+                    @input="dataSintoma = false"
+                  ></v-date-picker>
                 </v-menu>
                 </v-col>
                 <v-col class="col-3">
-                  <v-menu ref="dataRetorno" v-model="dataRetorno" :close-on-content-click="false"
-                  transition="scale-transition" offset-y max-width="290px" min-width="auto">
-                  <template v-slot:activator="{ on, attrs }">
                     <v-text-field
-                      readonly dense outlined v-model="dataRetornoFormatada" label="Data de retorno" persistent-hint
-                      prepend-icon="mdi-calendar" v-bind="attrs" @blur="date = parseDate(dataRetornoFormatada)" v-on="on">
+                      readonly dense outlined v-model="dataRetornoFormatada" label="Data de retorno" 
+                      prepend-icon="mdi-calendar">
                     </v-text-field>
-                  </template>
-                  </v-menu>
                 </v-col>
             </v-row>
             <v-divider></v-divider>
