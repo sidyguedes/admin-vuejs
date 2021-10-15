@@ -11,6 +11,7 @@ export default {
         inicioSintomas: false,
         dataRetornoEmpresa: false,
         dataRet: false,
+        labelSintomaRetorno: false,
 
         funcionarios: [
         'Tobias Guimaraes',
@@ -44,6 +45,17 @@ export default {
       dataRetornoFormatada() {
         this.dataRet = moment(this.dataSintomaContato).add(10, 'days').toDate();
         return moment(this.dataRet).format('DD/MM/YYYY');
+      },
+      labelMotivoSaida() {
+        if (this.motivoSaida == 'contato') {
+          this.labelSintomaRetorno = "Data que teve contato";
+        }else if(this.motivoSaida == 'suspeita'){
+          this.labelSintomaRetorno = "Inicio dos sintomas"; 
+        }else{
+          this.labelSintomaRetorno = "";
+        }
+        return this.labelSintomaRetorno;
+ 
       }
     }
 

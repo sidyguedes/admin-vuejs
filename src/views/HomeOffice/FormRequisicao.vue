@@ -61,7 +61,7 @@
               </v-col>
               <v-col class="col-11">
                 <v-radio-group v-model="motivoSaida" row dense>
-                  <v-radio label="Suspeita de COVID-19" value="supeita"></v-radio>
+                  <v-radio label="Suspeita de COVID-19" value="suspeita"></v-radio>
                   <v-radio label="Manutenção das PA's" value="manutencao"></v-radio>
                   <v-radio label="Contato com pessoa que testou positivo" value="contato"></v-radio>
                   <v-radio label="Outros" value="outros"></v-radio>
@@ -83,7 +83,7 @@
                     <v-text-field
                       dense outlined
                       v-model="dataSintomasFormatada"
-                      :label="motivoSaida == 'contato' ? 'Data que teve contato' : 'Inicio dos sintomas' "
+                      :label="labelMotivoSaida"
                       prepend-icon="mdi-calendar"
                       readonly
                       v-bind="attrs"
